@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ニャソちゅう</title>
+
+    <style>
+        body {
+            background-image: url(./images/nyasotyu.jpg);
+        }
+        .wrapper {
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>ニャソちゅう</h1>
+
+        <p>変ﾞ換ﾞしﾞたﾞいﾞ言ﾞ葉ﾞをﾞ入ﾞれﾞるﾞニﾞャﾞンﾞンﾞンﾞ</p>
+        <input type="text" id="text">
+        <input type="submit" id="submit" value="変換">
+        <p id="completed"></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $("#submit").click(function() {
+                var text = $('#text').val();
+                var text_arr = text.split('');
+                var text_completed = '';
+                for (var i = 0; i < text_arr.length; i++) {
+                    text_completed += text_arr[i] + 'ﾞ';
+                }
+                $("#completed").text(text_completed);
+            });
+        });
+    </script>
+</body>
+</html>
