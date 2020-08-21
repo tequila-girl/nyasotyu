@@ -32,6 +32,7 @@
         <input type="text" id="text">
         <input type="submit" id="submit" value="変換">
         <p id="completed"></p>
+        <a id="tweet" href="/" target="_blank">ツイートする</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -44,7 +45,9 @@
                 for (var i = 0; i < text_arr.length; i++) {
                     text_completed += text_arr[i] + 'ﾞ';
                 }
+                console.log(text_completed)
                 $("#completed").text(text_completed);
+                $("#tweet").attr("href", "http://twitter.com/share?text=" + text_completed);
             });
         });
     </script>
