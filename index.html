@@ -28,7 +28,7 @@
     <div class="wrapper">
         <h1>ニャソちゅう</h1>
 
-        <p>変ﾞ換ﾞしﾞたﾞいﾞ言ﾞ葉ﾞをﾞ入ﾞれﾞるﾞニﾞャﾞンﾞンﾞンﾞ</p>
+        <p>変ﾞ換ﾞしﾞたﾞいﾞ言ﾞ葉ﾞをﾞ入ﾞれﾞろﾞおﾞぉﾞんﾞ</p>
         <input type="text" id="text">
         <input type="submit" id="submit" value="変換">
         <p id="completed"></p>
@@ -42,10 +42,11 @@
                 var text = $('#text').val();
                 var text_arr = text.split('');
                 var text_completed = '';
+
                 for (var i = 0; i < text_arr.length; i++) {
                     text_completed += text_arr[i] + 'ﾞ';
                 }
-                console.log(text_completed)
+
                 $("#completed").text(text_completed);
                 $("#tweet").attr("href", "http://twitter.com/share?text=" + text_completed);
             });
